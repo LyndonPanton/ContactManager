@@ -1,6 +1,21 @@
 // General
 document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
+let tabs = document.getElementsByClassName("tab-item");
+Array.from(tabs).forEach(function(tab) {
+	tab.addEventListener("click", changeTab.bind(this, tab));
+});
+
+function changeTab(tab) {
+	if (tab.id == "tab-form") {
+		document.getElementById("contacts").classList.add("main-section-hidden");
+		document.getElementById("form").classList.remove("main-section-hidden");
+	} else {
+		document.getElementById("form").classList.add("main-section-hidden");
+		document.getElementById("contacts").classList.remove("main-section-hidden");
+	}
+}
+
 // Contact Manager
 function Contact(firstname, surname, age, number, email, address) {
 	this.firstname = firstname; // string
