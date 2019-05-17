@@ -11,6 +11,7 @@ body, html {
 	min-width: 100%;
 	min-height: 100%;
 	padding: 0;
+	background-color: #E3735E;
 	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 	font-size: 16px;
 }
@@ -166,6 +167,20 @@ tfoot {
 
 thead {
 	background-color: #CA4D5D;
+	color: white;
+}
+
+#form-error {
+	margin: 30px auto 0;
+	border: 3px #744F96 solid;
+	border-radius: 50px;
+	max-width: 60%;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: #FEDEBE;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	text-align: center;
+	text-decoration: underline;
 }
 
 
