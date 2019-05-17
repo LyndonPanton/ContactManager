@@ -1,9 +1,70 @@
+/* Lavender and Orange (@schemecolor): #744F96, #A57ACE, #BF94E4, #FEDEBE, #FFA500, #F77F00, */
+/* Terra Cotta and Yellow (@schemecolor): #CA4D5D, #E25B5E, #E3735E, #FEF65E, #FFE136, #FED404 */
+
 /* General /////////////////////////////////////////////////////////////////////////////// */
 body, html {
 	margin: 0;
 	min-width: 100%;
 	min-height: 100%;
 	padding: 0;
-	font-family: Palatino;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 	font-size: 16px;
 }
+
+
+/* Header /////////////////////////////////////////////////////////////////////////////// */
+h1 {
+	margin-top: 0;
+	padding-top: 20px;
+	/*padding-bottom: 10px;*/
+	text-align: center;
+	text-shadow: 0px 1px 2px #CCCCCC,
+				 0px 2px 2px #BBBBBB,
+				 0px 3px 2px #AAAAAA,
+				 0px 3px 2px #999999,
+				 0px 5px 2px #888888;
+}
+
+header {
+	background-color: #FEDEBE;
+}
+
+li {
+	flex: 1;
+	border-collapse: collapse;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+li:hover {
+	text-decoration: underline;
+	font-weight: 700;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-top: 1px #CA4D5D solid;;
+	border-bottom: 1px #CA4D5D solid;
+	padding: 0;
+	background-color: #BF94E4;
+	list-style-type: none;
+}
+
+#tab-form {
+	/*border-right: 1px #CA4D5D solid;*/
+}
+
+#tab-contacts {
+	border-left: 1px #CA4D5D solid;
+}
+
+
+/* Main ///////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/* Footer /////////////////////////////////////////////////////////////////////////////// */
