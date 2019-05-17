@@ -7,6 +7,10 @@ Array.from(tabs).forEach(function(tab) {
 });
 
 function changeTab(tab) {
+	Array.from(tab.parentElement.children).forEach(function(tab) {
+		tab.classList.toggle("tab-selected");
+	});
+	
 	if (tab.id == "tab-form") {
 		document.getElementById("contacts").classList.add("main-section-hidden");
 		document.getElementById("form").classList.remove("main-section-hidden");
