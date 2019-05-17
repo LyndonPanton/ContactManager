@@ -1,4 +1,4 @@
-// General
+// General //////////////////////////////////////////////////////////////////
 document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
 let tabs = document.getElementsByClassName("tab-item");
@@ -16,7 +16,7 @@ function changeTab(tab) {
 	}
 }
 
-// Contact Manager
+// Contact Manager //////////////////////////////////////////////////////////////////
 function Contact(firstname, surname, age, number, email, address) {
 	this.firstname = firstname; // string
 	this.surname = surname; // string
@@ -30,10 +30,27 @@ function Contact(firstname, surname, age, number, email, address) {
 
 Contact.contacts = [];
 
+// ES6 Syntax
+// class Contact {
+// 	constructor(firstname, surname, age, number, email, address) {
+// 		this.firstname = firstname; // string
+// 		this.surname = surname; // string
+// 		this.age = age; // number
+// 		this.number = number; // number
+// 		this.email = email; // string
+// 		this.address = address; // string
+// 		Contact.contacts.push(this);
+// 		console.log(Contact.contacts);
+// 		addContact(this);
+// 	}
+// }
+
+// Contact.contacts = [];
+
 // const a = new Contact("alice", "alison", 20, 12345678901, "alice1@mail.com", "1 Something Street");
 // const b = new Contact("bob", "bobson", 21, 23456789012, "bob2@mail.com", "2 Something Street");
 
-// Page Display
+// Page Display //////////////////////////////////////////////////////////////////
 function addContact(contact) {
 	let tableBody = document.getElementById("contacts-table").getElementsByTagName("tbody")[0];
 	let newRow = tableBody.insertRow(-1);
@@ -67,7 +84,7 @@ function addContact(contact) {
 	cellAddress.appendChild(cellAddressText);
 }
 
-// Form Validation
+// Form Validation //////////////////////////////////////////////////////////////////
 const form = document.getElementById("form-field");
 form.addEventListener("submit", function(event) {
 	event.preventDefault();
