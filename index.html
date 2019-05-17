@@ -5,7 +5,7 @@
 	<meta name="author" content="Lyndon Panton" />
 	<meta name="description" content="An application for managing contacts" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Contact Managaer</title>
+	<title>Contact Manager</title>
 	<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 </head>
 <body>
@@ -18,7 +18,39 @@
 	</header>
 
 	<main id="main">
-		
+		<section id="form" class="main-section">
+			<form id="form-field">
+				<label for="form">First Name:
+					<input id="form-field-firstname" type="text" name="form-field-firstname" placeholder="firstname" />
+				</label>
+
+				<label for="form">Family Name:
+					<input id="form-field-surname" type="text" name="form-field-surnname" placeholder="surname" />
+				</label>
+
+				<label for="form">Age:
+					<input id="form-field-age" type="number" name="form-field-age" placeholder="age" />
+				</label>
+
+				<label for="form">Number:
+					<input id="form-field-number" type="number" name="form-field-number" placeholder="number" />
+				</label>
+
+				<label for="form">Email:
+					<input id="form-field-email" type="email" name="form-field-email" placeholder="email" />
+				</label>
+
+				<label for="form">Address:
+					<input id="form-field-address" type="text" name="form-field-address" placeholder="address" />
+				</label>
+
+				<input id="form-field-submit" type="submit" value="Create Contact" />
+			</form>
+		</section>
+
+		<section id="contacts" class="main-section">
+			
+		</section>
 	</main>
 
 	<footer id="footer">
