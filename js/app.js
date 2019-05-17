@@ -1,3 +1,5 @@
+document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
+
 function Contact(firstname, surname, age, number, email, address) {
 	this.firstname = firstname; // string
 	this.surname = surname; // string
