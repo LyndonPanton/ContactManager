@@ -46,7 +46,8 @@ ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	border-top: 1px #CA4D5D solid;;
+	margin-bottom: 0;
+	border-top: 1px #CA4D5D solid;
 	border-bottom: 1px #CA4D5D solid;
 	padding: 0;
 	background-color: #BF94E4;
@@ -63,8 +64,66 @@ ul {
 
 
 /* Main ///////////////////////////////////////////////////////////////////////////////// */
+form {
+	margin-top: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FFE136;
+}
 
+input {
+	flex-basis: 70%;
+	margin: 0;
+	border: 1px #E25B5E solid;
+	border-radius: 5px;
+	text-align: center;
+	font-family: Papyrus, fantasy;
+}
 
+input:focus {
+	outline: none;
+	border: 1px #A57ACE solid;
+	background-color: #FEDEBE;
+}
+
+input::placeholder {
+	text-align: center;
+	font-family: Papyrus, fantasy;
+}
+
+label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 0;
+	margin-bottom: 8px;
+	min-height: 30px;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.label-text {
+	flex-basis: 25%;
+	line-height: 30px;
+}
+
+#form-field-submit {
+	display: block;
+	margin: 10px auto 0;
+	border: 2px #744F96 solid;
+	background-color: #CA4D5D;
+	text-align: center;
+	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+	font-size: 1.2em;
+	color: white;
+}
+
+#form-field-submit:active {
+	outline: none;
+	border: 2px #E3735E solid;
+	background-color: #BF94E4;
+	color: ;
+}
 
 
 /* Footer /////////////////////////////////////////////////////////////////////////////// */
