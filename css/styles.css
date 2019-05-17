@@ -146,6 +146,11 @@ tbody {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+tbody td {
+	text-align: center;
+	font-size: 0.8em;
+}
+
 td, th {
 	padding-top: 5px;
 	padding-bottom: 5px;
