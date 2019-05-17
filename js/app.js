@@ -9,10 +9,14 @@ function Contact(firstname, surname, age, number, email, address) {
 	this.number = number; // number
 	this.email = email; // string
 	this.address = address; // string
+	Contact.contacts.push(this);
+	console.log(this);
 }
 
-const a = new Contact("alice", "alison", 20, 12345678901, "alice1@mail.com", "1 Something Street");
-const b = new Contact("bob", "bobson", 21, 23456789012, "bob2@mail.com", "2 Something Street");
+Contact.contacts = [];
+
+// const a = new Contact("alice", "alison", 20, 12345678901, "alice1@mail.com", "1 Something Street");
+// const b = new Contact("bob", "bobson", 21, 23456789012, "bob2@mail.com", "2 Something Street");
 
 // Page Display
 
@@ -28,12 +32,19 @@ form.addEventListener("submit", function(event) {
 	let errorContainer = document.createElement("div");
 	errorContainer.id = "form-error";
 
-	errorContainer.appendChild(validateFirstName(this.children[0].children[1].value));
-	errorContainer.appendChild(validateSurname(this.children[1].children[1].value));
-	errorContainer.appendChild(validateAge(this.children[2].children[1].value));
-	errorContainer.appendChild(validateNumber(this.children[3].children[1].value));
-	errorContainer.appendChild(validateEmail(this.children[4].children[1].value));
-	errorContainer.appendChild(validateAddress(this.children[5].children[1].value));
+	const fn = this.children[0].children[1].value;
+	const sn = this.children[1].children[1].value;
+	const ag = this.children[2].children[1].value;
+	const n = this.children[3].children[1].value;
+	const e = this.children[4].children[1].value;
+	const ad = this.children[5].children[1].value;
+
+	errorContainer.appendChild(validateFirstName(fn));
+	errorContainer.appendChild(validateSurname(sn));
+	errorContainer.appendChild(validateAge(ag));
+	errorContainer.appendChild(validateNumber(n));
+	errorContainer.appendChild(validateEmail(e));
+	errorContainer.appendChild(validateAddress(ad));
 
 	if (errorContainer.textContent) {
 		// Add error container
@@ -50,6 +61,10 @@ form.addEventListener("submit", function(event) {
 		// Add error container
 		this.parentElement.appendChild(errorContainer);
 	}
+
+	this.reset();
+
+	new Contact(fn, sn, ag, n, e, ad);
 });
 
 function validateFirstName(fn) {
