@@ -10,7 +10,7 @@ function Contact(firstname, surname, age, number, email, address) {
 	this.email = email; // string
 	this.address = address; // string
 	Contact.contacts.push(this);
-	console.log(this);
+	addContact(this);
 }
 
 Contact.contacts = [];
@@ -19,6 +19,38 @@ Contact.contacts = [];
 // const b = new Contact("bob", "bobson", 21, 23456789012, "bob2@mail.com", "2 Something Street");
 
 // Page Display
+function addContact(contact) {
+	let tableBody = document.getElementById("contacts-table").getElementsByTagName("tbody")[0];
+	let newRow = tableBody.insertRow(-1);
+
+	let cellFirstName = newRow.insertCell(0);
+	let cellFirstNameText = document.createTextNode(contact.firstname);
+	cellFirstName.appendChild(cellFirstNameText);
+
+	let cellSurname = newRow.insertCell(1);
+	let cellSurnameText = document.createTextNode(contact.surname);
+	cellSurname.appendChild(cellSurnameText);
+
+
+	let cellAge = newRow.insertCell(2);
+	let cellAgeText = document.createTextNode(contact.age);
+	cellAge.appendChild(cellAgeText);
+
+
+	let cellNumber = newRow.insertCell(3);
+	let cellNumberText = document.createTextNode(contact.number);
+	cellNumber.appendChild(cellNumberText);
+
+
+	let cellEmail = newRow.insertCell(4);
+	let cellEmailText = document.createTextNode(contact.email);
+	cellEmail.appendChild(cellEmailText);
+
+
+	let cellAddress = newRow.insertCell(5);
+	let cellAddressText = document.createTextNode(contact.address);
+	cellAddress.appendChild(cellAddressText);
+}
 
 // Form Validation
 const form = document.getElementById("form-field");
