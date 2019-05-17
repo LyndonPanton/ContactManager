@@ -163,3 +163,10 @@ thead {
 
 
 /* Footer /////////////////////////////////////////////////////////////////////////////// */
+footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	text-align: center;
+	color: #FFA500;
+}
