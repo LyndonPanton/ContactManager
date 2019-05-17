@@ -58,6 +58,11 @@ ul {
 	list-style-type: none;
 }
 
+.tab-selected {
+	background-color: #E3735E;
+	color: white;
+}
+
 #tab-form {
 	/*border-right: 1px #CA4D5D solid;*/
 }
@@ -65,7 +70,6 @@ ul {
 #tab-contacts {
 	border-left: 1px #CA4D5D solid;
 }
-
 
 /* Main ///////////////////////////////////////////////////////////////////////////////// */
 .main-section-hidden {
