@@ -2,6 +2,10 @@
 /* Terra Cotta and Yellow (@schemecolor): #CA4D5D, #E25B5E, #E3735E, #FEF65E, #FFE136, #FED404 */
 
 /* General /////////////////////////////////////////////////////////////////////////////// */
+::-webkit-scrollbar {
+	display: none;
+}
+
 body, html {
 	margin: 0;
 	min-width: 100%;
@@ -64,6 +68,8 @@ ul {
 
 
 /* Main ///////////////////////////////////////////////////////////////////////////////// */
+
+/* Main: Form /////////////////////////////////////// */
 form {
 	margin-top: 0;
 	padding-top: 10px;
@@ -122,7 +128,37 @@ label {
 	outline: none;
 	border: 2px #E3735E solid;
 	background-color: #BF94E4;
-	color: ;
+}
+
+/* Main: Contacts //////////////////////////////////// */
+table {
+	min-width: 100%;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+table, td, th, tr {
+	border: 1px black solid;
+	border-collapse: collapse;
+}
+
+tbody {
+	background-color: #BF94E4;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+td, th {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	overflow-x: scroll;
+}
+
+tfoot {
+	background-color: #FFE136;
+	text-align: center;
+}
+
+thead {
+	background-color: #CA4D5D;
 }
 
 
